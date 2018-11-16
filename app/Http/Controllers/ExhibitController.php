@@ -28,7 +28,7 @@ class ExhibitController extends Controller
     public function create()
     {
         //
-        return'This is where my create form will go';
+        return view('exhibits.create');;
     }
 
     /**
@@ -40,7 +40,15 @@ class ExhibitController extends Controller
     public function store(Request $request)
     {
         //
-        return 'This is where I will store the data';
+      $exhibit = new Exhibit();
+      $exhibit->exhibit_name = request('exhibit_name');
+      $exhibit->image_URL = request('image_URL');
+      $exhibit->description = request('description');
+      $exhibit->user_id = \Auth::id();
+      $exhibit->artist =request('artist');
+      $exhibit->year =request('year');
+      $exhibit->save();
+      return redirect('/exhibits');;
     }
 
     /**
@@ -63,7 +71,8 @@ class ExhibitController extends Controller
     public function edit($id)
     {
         //
-        return 'This is where my edit for will be';
+      $exhibit=Exhibit::find($id);
+      return view('exhibits.edit',compact('exhibit'));
     }
 
     /**
@@ -76,7 +85,15 @@ class ExhibitController extends Controller
     public function update(Request $request, $id)
     {
         //
-        return 'This is where I will update the data';
+      $exhibit =Exhibit::find($id);
+      $exhibit->exhibit_name = $request->input('exhibit_name');
+      $exhibit->image_URL = $request->input('image_URL');
+      $exhibit->description = $request->input('description');
+      $exhibit->user_id = \Auth::id();
+      $exhibit->artist = $request->input('artist');
+      $exhibit->year = $request->input('year');
+      $exhibit->save();
+      return redirect('/exhibits');
     }
 
     /**
@@ -88,6 +105,12 @@ class ExhibitController extends Controller
     public function destroy($id)
     {
         //
-        return 'This is where I will delete the exhibit';
+        $exhibit =Exhibit::find($id);
+        $exhibit->delete();
+        return redirect('/exhibits');
+    }
+    public function delete(Exhibit $exhibit)
+    {
+
     }
 }

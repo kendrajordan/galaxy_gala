@@ -1,7 +1,7 @@
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
 // Variables
 @import 'variables';
 
@@ -11,4 +11,11 @@
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+body
+{
+  background-image: url(https://i.pinimg.com/originals/ec/3f/08/ec3f081a118bae0175cb43c68e673198.jpg);
+  max-width: 100%;
+  background-size: cover;
+  font-family: 'Space Mono', monospace;
 }

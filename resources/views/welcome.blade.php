@@ -12,12 +12,16 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+
+            }
+            body{
+              background-image: url(https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwib-Nf-4dneAhVRslMKHdS3CLwQjRx6BAgBEAU&url=https%3A%2F%2Fwallpaper.wiki%2Fabstract-space-background-download-free.html%2Fwallpaper-wiki-beautiful-space-galaxy-cosmos-stars-energy-universe-light-abstract-wallpaper-pic-wpd0014222%2F&psig=AOvVaw2r5HGZ3HYJXl04cRCPgccO&ust=1542486993286201);
+              background-size: cover;
             }
 
             .full-height {
@@ -84,14 +88,7 @@
                     Laravel
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+
             </div>
         </div>
     </body>
