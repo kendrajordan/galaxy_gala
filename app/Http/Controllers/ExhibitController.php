@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\User;
+use App\Exhibit;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ExhibitController extends Controller
 {
@@ -14,7 +16,8 @@ class ExhibitController extends Controller
     public function index()
     {
         //
-        return 'This is where my gallery will go.';
+        $exhibits =Exhibit::orderBy('updated_at', 'desc')->get();
+        return view('exhibits.index',compact('exhibits'));
     }
 
     /**

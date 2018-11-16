@@ -29,6 +29,6 @@ class User extends Authenticatable
     ];
     public function exhibit()
     {
-      return $this ->hasMany('App\Exhibit');
+      return $this->hasMany('App\Exhibit');
     }
 }

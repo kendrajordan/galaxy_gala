@@ -18,4 +18,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
-Route::get('/exhibit','ExhibitController@index')->middleware('auth');
+Route::get('/exhibits','ExhibitController@index')->middleware('auth');
