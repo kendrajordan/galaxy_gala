@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                color: #636b6f;
+                color: #FCEEC0;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -20,7 +20,7 @@
 
             }
             body{
-              background-image: url(https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwib-Nf-4dneAhVRslMKHdS3CLwQjRx6BAgBEAU&url=https%3A%2F%2Fwallpaper.wiki%2Fabstract-space-background-download-free.html%2Fwallpaper-wiki-beautiful-space-galaxy-cosmos-stars-energy-universe-light-abstract-wallpaper-pic-wpd0014222%2F&psig=AOvVaw2r5HGZ3HYJXl04cRCPgccO&ust=1542486993286201);
+              background-image: url(https://i.pinimg.com/originals/ec/3f/08/ec3f081a118bae0175cb43c68e673198.jpg);
               background-size: cover;
             }
 
@@ -53,7 +53,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #FCEEC0;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -85,10 +85,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Galaxy Gala
                 </div>
 
-
+                <p style="font-size:2em;  font-weight: bold;">A photo gallery for people who like to reach for the stars!</p>
             </div>
         </div>
     </body>
