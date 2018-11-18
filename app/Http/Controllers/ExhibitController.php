@@ -71,7 +71,7 @@ class ExhibitController extends Controller
     public function edit($id)
     {
         //
-      $exhibit=Exhibit::find($id);
+      $exhibit=\App\Exhibit::find($id);
       return view('exhibits.edit',compact('exhibit'));
     }
 

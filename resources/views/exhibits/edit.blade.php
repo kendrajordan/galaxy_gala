@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class='container bg-light'>
+<div class='container bg-primary text-warning'>
     <form action="/exhibits/{{$exhibit->id}}" method="POST">
       @method('PUT')
       @csrf

@@ -12,14 +12,20 @@
     </div>
     <div class="card-footer bg-dark">
       <small class="text-muted">Posted by {{$exhibit->user->name}} on {{$exhibit->updated_at}}.</small>
-      <form action="{{url('/exhibits',$exhibit->id)}}" method='POST' class="float-sm-right">
-                  {{ csrf_field() }}
-                  {{ method_field('DELETE') }}
-                  <button type="submit"class="btn btn-dark"><i class="fas fa-user-minus text-primary ml-4"></i></button>
-                  <button type='submit' class="btn btn-dark"><a href="/exhibits/{{$exhibit->id}}/edit"><i class="fas fa-user-edit text-primary"></i></a></button>
-      </form>
+        <div class="float-right row">
+            <button type='submit' class="btn btn-dark"><a href="/exhibits/{{$exhibit->id}}/edit"><i class="fas fa-user-edit text-primary"></i></a></button>
+            <form action="{{url('/exhibits',$exhibit->id)}}" method='POST'>
+                        @csrf
+                        {{ method_field('DELETE') }}
+                      <button type="submit"class="btn btn-dark"><i class="fas fa-user-minus text-primary"></i></button>
+
+            </form>
+      </div>
     </div>
   </div>
   @endforeach
+  <button type="submit" class="text-center btn btn-primary">
+    <a class="text-warning"href="/exhibits/create"><h2>Add An Exhibit</h2></a>
+  </button>
 </div>
 @endsection
