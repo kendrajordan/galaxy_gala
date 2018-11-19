@@ -109,8 +109,9 @@ class ExhibitController extends Controller
         $exhibit->delete();
         return redirect('/exhibits');
     }
-    public function delete(Exhibit $exhibit)
+    public function welcome()
     {
-
+      $exhibits =Exhibit::orderBy('updated_at', 'desc')->get();
+      return view('welcome',compact('exhibits'));
     }
 }

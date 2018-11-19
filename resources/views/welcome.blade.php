@@ -66,6 +66,7 @@
                 margin-bottom: 30px;
             }
         </style>
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -82,14 +83,35 @@
                     @endauth
                 </div>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
+            <div class="content text-warning">
+                <div class="title m-b-md ">
                     Galaxy Gala
                 </div>
 
                 <p style="font-size:2em;  font-weight: bold;">A photo gallery for people who like to reach for the stars!</p>
+
             </div>
         </div>
+
+            <div class='container card-group flex-column col-md-9'>
+              <h1 class='text-center text-warning'>Images of The Stars</h1>
+              @foreach ($exhibits as $exhibit)
+              <div class="card mt-3 mb-3">
+                <img class="card-img-top" src="{{$exhibit->image_URL}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{$exhibit->exhibit_name}}</h5>
+                  <p class="card-text">Artist:{{$exhibit->artist}} Created on:{{$exhibit->year}}</p>
+                  <p class="card-text">{{$exhibit->description}}</p>
+                </div>
+                <div class="card-footer bg-dark">
+                  <small class="text-muted">Posted by {{$exhibit->user->name}} on {{$exhibit->updated_at}}.</small>
+                </div>
+              </div>
+              @endforeach
+              <button type="submit" class="text-center btn btn-primary">
+                <a class="text-warning"href="/exhibits/create"><h2>Add An Exhibit</h2></a>
+              </button>
+
+      </div>
     </body>
 </html>
